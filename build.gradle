@@ -4,7 +4,7 @@ apply plugin: 'java'
 apply plugin: 'maven'
 
 group = 'io.dapas.prometheus-utils'
-version = '0.1-SNAPSHOT'
+version = '0.1'
 
 // In this section you declare where to find the dependencies of your project
 repositories {
