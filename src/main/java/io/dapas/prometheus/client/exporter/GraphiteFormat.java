@@ -23,8 +23,7 @@ public class GraphiteFormat {
 
     private static final Pattern INVALID_GRAPHITE_CHARS = Pattern.compile("[^a-zA-Z0-9_-]");
 
-    public static void write(Writer inputWriter, Enumeration<Collector.MetricFamilySamples> mfs) throws IOException {
-        BufferedWriter writer = new BufferedWriter(inputWriter);
+    public static void write(Writer writer, Enumeration<Collector.MetricFamilySamples> mfs) throws IOException {
         Matcher m = INVALID_GRAPHITE_CHARS.matcher("");
         long now = System.currentTimeMillis() / 1000;
         for (Collector.MetricFamilySamples metricFamilySamples: Collections.list(mfs)) {
@@ -53,7 +52,5 @@ public class GraphiteFormat {
                 }
             }
         }
-
-        writer.close();
     }
 }
