@@ -1,0 +1,37 @@
+#####
+# Generic files
+#####
+*.so
+*.log
+*.out
+*~
+*.swp
+*.DS_Store
+*.lock
+*.bak
+
+#####
+# Build files and folders
+#####
+target/
+classes/
+out/
+bin/
+build/
+dist/
+.checkstyle
+.pmd
+.gradle
+
+#####
+# IntelliJ IDEA files and folders
+#####
+.idea/
+*.iwl
+*.ips
+*.iml
+
+###
+# Local configuration file.
+###
+application.conf
